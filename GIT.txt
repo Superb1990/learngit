@@ -14,6 +14,7 @@ git rm <file>				  删除仓库文件
 ssh-keygen -t rsa -C "email"		  创建公钥和密钥（id_rsa是密钥，id_rsa.pub是公钥）
 git remote add origin  URL                链接远程仓库
 git push （第一次-u） origin (本地仓库名) 将本地仓库同步到远程仓库
+git pull 				  将远程仓库与本地仓库相同分支pull
 git clone URL				  将远程仓库克隆到本地
 git checkout -b dev			  创建并切换到dev分支
 =》git branch dev			  创建分支
