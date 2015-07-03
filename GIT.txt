@@ -1,29 +1,38 @@
 git config --global user.name "username"  设置用户名
 git config --global user.email "useremail"设置邮箱
-git init  				  初始化一个Git仓库
+git init  				 				  初始化一个Git仓库
 git add <file>                            添加到暂存区
 git commit -m "remark"                    提交到仓库
-git status				  查看git状态
-git diff 	                          查看修改
-git log					  查看提交历史
-git reflog				  查看命令历史
+git status				 				  查看git状态
+git diff 	                         	  查看修改
+git log					 				  查看提交历史
+git reflog				 			      查看命令历史
 git reset --hard HEAD^(head是当前版本)    回退到特定版本
-git checkout -- file 			  暂存区覆盖工作区
-git checkout HEAD file 			  仓库覆盖暂存区
-git rm <file>				  删除仓库文件
-ssh-keygen -t rsa -C "email"		  创建公钥和密钥（id_rsa是密钥，id_rsa.pub是公钥）
+git checkout -- file 			  		  暂存区覆盖工作区
+git checkout HEAD file 			 		  仓库覆盖暂存区
+git rm <file>				  			  删除仓库文件
+ssh-keygen -t rsa -C "email"		  	  创建公钥和密钥（id_rsa是密钥，id_rsa.pub是公钥）
 git remote add origin  URL                链接远程仓库
 git push （第一次-u） origin (本地仓库名) 将本地仓库同步到远程仓库
-git clone URL				  将远程仓库克隆到本地
-git checkout -b dev			  创建并切换到dev分支
-=》git branch dev			  创建分支
-   git checkout dev			  切换到某个分支
-git branch				  查看当前分支
-git merge dev				  合并指定分支（dev）到当前分支
-git branch -d dev			  删除指定分支（大写-D为强制删除，如果该分支未合并）
-git stash				  将当前分支工作区保存（add到缓存区的将被撤销）
-git stash pop				  将保存的分支工作区内容从栈中推出（栈中不保存）
-git stash apply				  将保存的分支工作区内容从栈中复制出（栈中保存）
-git stash drop 				  删除栈中保存的内容
-git stash list 				  查看栈中保存记录
-git remote -v 				  查看远程连接
+git clone URL				  			  将远程仓库克隆到本地
+git checkout -b dev			  			  创建并切换到dev分支
+=》git branch dev			    		  创建分支
+   git checkout dev						  切换到某个分支
+git branch								  查看当前分支
+git merge dev							  合并指定分支（dev）到当前分支
+git branch -d dev						  删除指定分支（大写-D为强制删除，如果该分支未合并）
+git stash								  将当前分支工作区保存（add到缓存区的将被撤销）
+git stash pop							  将保存的分支工作区内容从栈中推出（栈中不保存）
+git stash apply							  将保存的分支工作区内容从栈中复制出（栈中保存）
+git stash drop 							  删除栈中保存的内容
+git stash list 							  查看栈中保存记录
+git remote -v 							  查看远程连接
+git branch --set-upstream branch-name origin/branch-name 建立本地分支和远程分支的关联
+多人协作的工作模式是这样：
+1.用 git push origin branch-name 推送自己的修改;
+2.如果推送失败，则远程分支比本地版本新，需要用git pull试图合并
+3.如果合并有冲突，则解决冲突，并在本地提交；
+4.没有冲突或者解决冲突后，在用git push origin branch-name 推送就能成功
+如果git pull 提示“no tracking information",则说明本地分支和远程分支的连接关系没有创建，
+用命令git branch --set-upstream branch-name origin/branch-name
+
