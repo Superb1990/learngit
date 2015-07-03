@@ -35,4 +35,12 @@ git branch --set-upstream branch-name origin/branch-name ½¨Á¢±¾µØ·ÖÖ§ºÍÔ¶³Ì·ÖÖ§µ
 4.Ã»ÓĞ³åÍ»»òÕß½â¾ö³åÍ»ºó£¬ÔÚÓÃgit push origin branch-name ÍÆËÍ¾ÍÄÜ³É¹¦
 Èç¹ûgit pull ÌáÊ¾¡°no tracking information",ÔòËµÃ÷±¾µØ·ÖÖ§ºÍÔ¶³Ì·ÖÖ§µÄÁ¬½Ó¹ØÏµÃ»ÓĞ´´½¨£¬
 ÓÃÃüÁîgit branch --set-upstream branch-name origin/branch-name
+git log --pretty=oneline --abbrev-commit  ÏÔÊ¾Ìá½»µÄÈÕÖ¾
+git tag <name>							  Ö¸¶¨±êÇ©ĞÅÏ¢
+git push origin <tagname>				  ¿ÉÒÔÍÆËÍÒ»¸ö±¾µØ±êÇ©
+git push origin --tags					  ÍÆËÍÈ«²¿Î´ÍÆËÍ¹ıµÄ±¾µØ±êÇ©
+git tag -d <tagname>					  É¾³ıÒ»¸ö±¾µØ±êÇ©
+git push origin :refs/tags/<tagname>      ¿ÉÒÔÉ¾³ıÒ»¸öÔ¶³Ì±êÇ©
+git config --global alias.(±ğÃû) £¨È«Ãû£© ¸øgitÖ¸ÁîÅäÖÃ±ğÃû
+
 
